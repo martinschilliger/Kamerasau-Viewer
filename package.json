@@ -1,0 +1,23 @@
+{
+  "name": "kamerasau-viewer",
+  "version": "0.0.1",
+  "description": "Client for Kamerasau JSMPEG Streaming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinschilliger/Kamerasau-Viewer.git"
+  },
+  "author": "Martin Schilliger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinschilliger/Kamerasau-Viewer/issues"
+  },
+  "homepage": "https://github.com/martinschilliger/Kamerasau-Viewer#readme",
+  "dependencies": {
+    "@cycjimmy/jsmpeg-player": "^5.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}
