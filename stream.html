@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Kamerasau.ch LiveStream Videobild</title>
+    <meta name="description" content="Kamerasau.ch LiveStream Videobild" />
+    <meta name="author" content="Kamerasau.ch" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div id="videoWrapper"></div>
+    <div id="streamSwitcher" style="visibility: hidden;">
+      <button type="button" id="cameraButton1" class="camera-switch">
+        Kamera 1
+      </button>
+      <button type="button" id="cameraButton2" class="camera-switch">
+        Kamera 2
+      </button>
+      <button type="button" id="cameraButton3" class="camera-switch">
+        Kamera 3
+      </button>
+    </div>
+    <div id="textWrapper">
+      <div id="errorText" style="opacity: 0; transition: opacity 1s;">
+        <h1>Hoppla!</h1>
+        <p>
+          Die Kamerasau geniesst aufgrund technischer Probleme gerade etwas
+          Privatsphäre. <br />Unter «Fotos und Videos» findest du aber tolle
+          Aufnahmen aus dem Archiv.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/main-min.js"></script>
+  </body>
+</html>
