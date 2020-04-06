@@ -17,6 +17,22 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/404.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/404.html",
+		"oF": 0
+		},
+	"/50x.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/50x.html",
+		"oF": 0
+		},
 	"/background.jpg": {
 		"ft": 16384,
 		"iS": 165823,
