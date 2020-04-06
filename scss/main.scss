@@ -13,8 +13,8 @@ body {
   background-size: contain;
 }
 
-#videoWrapper {
-  opacity: 0;
+.video-wrapper {
+  // opacity: 0;
   canvas {
     position: fixed;
     top: 0;
@@ -30,7 +30,7 @@ body {
   }
 }
 
-#errorText {
+#textWrapper {
   position: fixed;
   bottom: 0;
   left: 0;
