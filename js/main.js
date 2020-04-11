@@ -1,8 +1,6 @@
 "use strict";
 
 import JSMpeg from "@cycjimmy/jsmpeg-player";
-// import Promise from "promise-polyfill";
-import "promise-polyfill/src/polyfill";
 
 var streams = [1, 2, 3];
 var kamerasauPlayer = {};
