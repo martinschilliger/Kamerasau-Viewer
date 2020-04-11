@@ -2,15 +2,6 @@
 
 import JSMpeg from "@cycjimmy/jsmpeg-player";
 
-var isIE11 = !!(
-  navigator.userAgent.match(/Trident/) && !navigator.userAgent.match(/MSIE/)
-);
-
-if (isIE11) {
-  if (typeof window.attachEvent == "undefined" || !window.attachEvent)
-    window.attachEvent = window.addEventListener;
-}
-
 var streams = [1, 2, 3];
 var kamerasauPlayer = {};
 var activeStreams;
