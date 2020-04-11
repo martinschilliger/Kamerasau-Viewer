@@ -15,18 +15,21 @@ body {
 
 #videoWrapper {
   // opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   canvas {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    display: block;
     max-width: 100%;
     width: inherit;
     max-height: 100%;
     height: inherit;
-    margin: auto;
-    zoom: 10;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
