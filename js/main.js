@@ -52,7 +52,7 @@ function playStream(stream) {
 }
 
 function watchStreamsData() {
-  new Promise.all(
+  Promise.all(
     streams.map(x => {
       return fetch("https://kamerasau.martin-apps.ch/api-" + x).then(function(
         response
