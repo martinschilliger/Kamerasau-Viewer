@@ -28,7 +28,6 @@ function playStream(stream) {
   }
 
   (function() {
-    window.parent.document.body.style.zoom = 2;
     kamerasauPlayer.player = new JSMpeg.VideoElement(
       "#videoWrapper",
       "wss://kamerasau.martin-apps.ch/websocket-" + stream + "/",
