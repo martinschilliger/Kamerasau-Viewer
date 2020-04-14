@@ -90,7 +90,7 @@ function watchStreamsData() {
 }
 setInterval(function() {
   watchStreamsData();
-}, 1000);
+}, 10 * 1000);
 
 var buttons = document.querySelectorAll("#streamSwitcher .camera-switch");
 Array.prototype.forEach.call(buttons, function(button) {
