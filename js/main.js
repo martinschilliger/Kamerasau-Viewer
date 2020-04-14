@@ -88,6 +88,7 @@ function watchStreamsData() {
     playStream();
   });
 }
+watchStreamsData();
 setInterval(function() {
   watchStreamsData();
 }, 10 * 1000);
