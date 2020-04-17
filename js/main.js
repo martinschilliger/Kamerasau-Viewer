@@ -39,12 +39,12 @@ function playStream(stream) {
           },
           destroy: function () {
             document.getElementById("textWrapper").style.display = "";
-          },
-        },
+          }
+        }
       },
       {
         audio: false,
-        disableWebAssembly: true, //schneller Wechsel zwischen Streams machte sonst noch mehr Probleme
+        disableWebAssembly: true //schneller Wechsel zwischen Streams machte sonst noch mehr Probleme
       }
     );
   })();
