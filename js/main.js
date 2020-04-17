@@ -27,23 +27,24 @@ function playStream(stream) {
     kamerasauPlayer.player.destroy();
   }
 
-  (function() {
+  (function () {
     kamerasauPlayer.player = new JSMpeg.VideoElement(
       "#videoWrapper",
       "wss://kamerasau.martin-apps.ch/websocket-" + stream + "/",
       {
         control: false,
         hooks: {
-          load: function() {
+          load: function () {
             document.getElementById("textWrapper").style.display = "none";
           },
-          destroy: function() {
+          destroy: function () {
             document.getElementById("textWrapper").style.display = "";
-          }
-        }
+          },
+        },
       },
       {
-        disableWebAssembly: true //schneller Wechsel zwischen Streams machte sonst noch mehr Probleme
+        audio: false,
+        disableWebAssembly: true, //schneller Wechsel zwischen Streams machte sonst noch mehr Probleme
       }
     );
   })();
@@ -51,19 +52,19 @@ function playStream(stream) {
 
 function watchStreamsData() {
   Promise.all(
-    streams.map(x => {
-      return fetch("https://kamerasau.martin-apps.ch/api-" + x).then(function(
+    streams.map((x) => {
+      return fetch("https://kamerasau.martin-apps.ch/api-" + x).then(function (
         response
       ) {
         return response.json();
       });
     })
-  ).then(streamsData => {
+  ).then((streamsData) => {
     var buttonDiv = document.getElementById("streamSwitcher");
     activeStreams = [];
 
     for (let data of streamsData) {
-      (function() {
+      (function () {
         var button = document.getElementById("cameraButton" + data.number);
         if (data.stream_active) {
           button.style.display = "inline-block";
@@ -89,18 +90,18 @@ function watchStreamsData() {
   });
 }
 watchStreamsData();
-setInterval(function() {
+setInterval(function () {
   watchStreamsData();
 }, 10 * 1000);
 
 var buttons = document.querySelectorAll("#streamSwitcher .camera-switch");
-Array.prototype.forEach.call(buttons, function(button) {
-  button.addEventListener("click", function(e) {
+Array.prototype.forEach.call(buttons, function (button) {
+  button.addEventListener("click", function (e) {
     let stream = Number(e.target.id.replace(/\D/g, ""));
     playStream(stream);
   });
 });
 
-setTimeout(function() {
+setTimeout(function () {
   document.getElementById("errorText").style.opacity = 1;
 }, 2000);
