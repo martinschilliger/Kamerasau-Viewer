@@ -12,6 +12,11 @@ body {
   background: $background-color url("../background.jpg") no-repeat fixed center;
   background-size: contain;
 }
+body.stream-only {
+  #videoWrapper {
+    // zoom: 2;
+  }
+}
 
 #videoWrapper {
   // opacity: 0;
