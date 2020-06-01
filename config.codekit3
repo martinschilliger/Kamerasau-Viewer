@@ -161,7 +161,7 @@
 		},
 	"/scss/main.scss": {
 		"aP": 1,
-		"bl": 0,
+		"bl": 1,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
@@ -483,7 +483,7 @@
 	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"browserslistString": ">0.1%, last 10 versions, Firefox ESR, not dead",
+	"browserslistString": ">0.001%, last 10 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
