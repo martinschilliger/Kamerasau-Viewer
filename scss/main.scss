@@ -13,12 +13,6 @@ body {
   background-size: contain;
 }
 
-body.stream-only {
-  #videoWrapper {
-    zoom: 2;
-  }
-}
-
 #videoWrapper {
   // opacity: 0;
   position: fixed;
@@ -30,12 +24,13 @@ body.stream-only {
     position: relative;
     display: block;
     max-width: 100%;
-    width: inherit;
+    // width: inherit;
     max-height: 100%;
-    height: inherit;
+    // height: inherit;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
+    object-fit: contain;
   }
 }
 
