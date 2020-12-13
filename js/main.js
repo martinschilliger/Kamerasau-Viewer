@@ -30,7 +30,7 @@ function playStream(stream) {
   (function () {
     kamerasauPlayer.player = new JSMpeg.VideoElement(
       "#videoWrapper",
-      "wss://kamerasau.martin-apps.ch/websocket-" + stream + "/",
+      `wss://${location.host}/websocket-${stream}/`,
       {
         control: false,
         hooks: {
@@ -53,7 +53,7 @@ function playStream(stream) {
 function watchStreamsData() {
   Promise.all(
     streams.map((x) => {
-      return fetch("https://kamerasau.martin-apps.ch/api-" + x).then(function (
+      return fetch(`https://${location.host}/api-${x}`).then(function (
         response
       ) {
         return response.json();
